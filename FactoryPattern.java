@@ -4,7 +4,7 @@ public class FactoryPattern {
     public static void main(String[] args) {
         // In java we cannot create an instance of interface, but we can create instances of classes that implement that interface
         // Here "NotificationFactory.createNotification("EMAIL");" return an object of class who has implemented the Notification interface
-        // It is similar like List<Integer> list = new ArrayList<>(); where List is interface and ArrayList<>() implemented it.
+        // It is similar to List<Integer> list = new ArrayList<>(); where List is interface and ArrayList<>() implemented it.
         Notification notification = NotificationFactory.createNotification("EMAIL");
         notification.notifyUser("ABC");
     }
