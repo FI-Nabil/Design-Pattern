@@ -70,6 +70,10 @@ class Student implements Prototype {
     // The return type of the method is Prototype, Prototype is an interface, so this method will return an object of
     // a class who has implemented the interface, in this case it is Student class.
     public Prototype getClone() {
+        // if we do like this --
+        // List<String> studentList = new ArrayList<>();
+        // studentList = this.getStudentList() It will not work, the previous array will still be modified, here calle by reference
+
 
         List<String> studentList = new ArrayList<>(this.getStudentList());
         return new Student(studentList);
